@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, section, article, footer {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav {
+            flex-basis: 100%;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        section {
+            flex: 1;
+        }
+        article {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"],
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        figure {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Título da Página</h1>
+</header>
+
+<nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+
+<div class="container">
+    <section>
+        <h2>Seção</h2>
+        <p>Conteúdo da seção à esquerda.</p>
+    </section>
+
+    <article>
+        <header>
+            <h2>Leia Mais</h2>
+        </header>
+
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome">
+
+            <label for="arquivo">Arquivo:</label>
+            <input type="file" id="arquivo" name="arquivo">
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <figure>
+            <img src="imagem.jpg" alt="Descrição da imagem" width="200">
+            <figcaption>Legenda da Imagem</figcaption>
+        </figure>
+
+        <section>
+            <p>Parágrafo dentro do artigo.</p>
+        </section>
+    </article>
+</div>
+
+<footer>
+    <p>&copy;Rodapé da Página</p>
+</footer>
+
+</body>
+</html>
